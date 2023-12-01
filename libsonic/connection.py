@@ -2566,7 +2566,7 @@ class Connection(object):
         self._checkStatus(res)
         return res
 
-    def getAlbumInfo2(self, aid):
+    def getAlbumInfo2(self, id):
         """
         since 1.14.0
 
@@ -2577,7 +2577,7 @@ class Connection(object):
         methodName = 'getAlbumInfo2'
         viewName = '%s.view' % methodName
 
-        q = {'id': int(aid)}
+        q = {'id': id}
         req = self._getRequest(viewName, q)
         res = self._doInfoReq(req)
         self._checkStatus(res)
